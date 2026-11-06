@@ -75,7 +75,7 @@ export default function CheckoutPage() {
 
   // TỔNG TIỀN CUỐI CÙNG SAU KHI TRỪ VOUCHER VÀ MEMBERSHIP
   const finalTotalToPay = grandTotal - voucherDiscountAmount - memDiscountAmount;
-  const depositAmount = finalTotalToPay * 0.20; 
+  const depositAmount = Math.round(finalTotalToPay * 0.20);
 
   const handleApplyVoucher = async () => {
     if (!voucherCode.trim()) return;
